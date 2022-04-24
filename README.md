@@ -7,7 +7,7 @@ This repository reviews our process for building a bilingual Tagalog-English tra
 Our data consists of two Tagalog datasets equal to approxiamtely 1.5 GB of tagalog training data and 500MB of English. 
 1) [WikiText-TL-39](https://s3.us-east-2.amazonaws.com/blaisecruz.com/datasets/wikitext-tl-39/wikitext-tl-39.zip): Large scale, unlabeled Filipino text dataset with 39 Million tokens 
 2) [tlunified
-3) [openwebtext](https://drive.google.com/drive/folders/1IaD_SIIB-K3Sij_-JjWoPy_UrWqQRdjx?usp=sharing): Small subset of the [open-source project\(https://skylion007.github.io/OpenWebTextCorpus/) dataset of 38GB of social media forum posts. 
+3) [openwebtext](https://drive.google.com/drive/folders/1IaD_SIIB-K3Sij_-JjWoPy_UrWqQRdjx?usp=sharing): Small subset of the [open-source project](https://skylion007.github.io/OpenWebTextCorpus/) dataset of 38GB of social media forum posts. 
 4) 
 ## Code 
 
