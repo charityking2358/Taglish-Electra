@@ -19,6 +19,9 @@ if __name__ == "__main__":
     elif lang == 'english':
         model = 'bert-base-cased'
     
+    elif lang =='multilingual':
+        model = 'bert-base-multilingual-cased'
+
     else:
         print ("Language not supported by tokenizers") 
         quit
