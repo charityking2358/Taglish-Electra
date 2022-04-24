@@ -14,12 +14,9 @@ Our data consists of two Tagalog datasets equal to approxiamtely 1.5 GB of tagal
 ### Environment Setup 
 Initialize your conda environment 
 ```
-conda create -n your_env python=3.7
-conda activate your_env
-conda install pytorch torchvision torchaudio cudatoolkit=10.2 -c pytorch
 git clone https://github.com/charityking2358/Taglish-Electra.git
 cd Taglish-Electra
-pip install -r requirements.txt
+conda create --name <env_name> --file requirements.txt
 ```
 ### Processing the Data
 This bash script combines all of our data and tokenizes
