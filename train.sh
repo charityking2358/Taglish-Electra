@@ -22,9 +22,10 @@ python electra/run_pretraining.py \
     "do_eval": "false",
     "model_size": "small",
     "do_lower_case": "false",
-    "vocab_size": 30097,
+    "vocab_size": 30101,
     "num_train_steps": 200,
     "save_checkpoints_steps": 100,
+    "generator_hidden_size": 1.0,
     "train_batch_size": 32}'
 
 #python electra_pytorch/convert_electra_tf_checkpoint_to_pytorch.py \

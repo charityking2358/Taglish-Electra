@@ -2,7 +2,6 @@
 
 import argparse
 
-
 if __name__ == "__main__":
     parser = argparse.ArgumentParser(description='Poorly constructed code to splice together vocab created from different tokenizers')
     parser.add_argument('--txt1', type=str, help='Vocab for one text" ', required=True)
@@ -28,6 +27,6 @@ if __name__ == "__main__":
 
     final_vocab = list(set(t1 + t2))
 
-    with open('{}/vocab.txt', 'w') as filehandle:
-    for listitem in final_vocab:
-        filehandle.write('%s\n' % listitem)
+    with open('{}/vocab.txt'.format(out_data), 'w') as filehandle:
+        for listitem in final_vocab:
+            filehandle.write(listitem + "\n")
