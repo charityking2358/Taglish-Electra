@@ -31,7 +31,8 @@ then
         rm -rf $DATA_DIR/tlunified/
         rm $DATA_DIR/train1.txt
 	rm $DATA_DIR/train2_.txt $DATA_DIR/train1_.txt
-	rm $ENG_DIR/eng_data1.txt
+	rm $DATA_DIR/eng_data1.txt
+	rm $DATA_DIR/eng_data.txt
 
 else
 	echo 'Using the Full Tagalog and English Datasets'
@@ -39,6 +40,7 @@ else
 	rm -rf $DATA_DIR/tlunified/
 	rm $DATA_DIR/train1.txt
 	rm $DATA_DIR/tlunified.zip
+	rm $DATA_DIR/eng_data1.txt
 
 		
 
