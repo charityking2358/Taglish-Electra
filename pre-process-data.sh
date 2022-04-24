@@ -1,6 +1,7 @@
-#Grab the Electra repo and Electra to Pytorch conversion repos
+#Grab the Electra repo and Electra to Pytorch conversiion repos
 git clone https://github.com/google-research/electra.git
 git clone https://github.com/lonePatient/electra_pytorch.git
+
 
 DATA_DIR=data
 ENG_DIR=eng_data
@@ -46,12 +47,12 @@ else
 
 fi
 
-echo "Call Tagalong and English-Based tokenizers"
+echo "Creating Filipino and English-Based tokenizers"
 #Build Tokenizers
 python tokenizer.py --Lang 'filipino' --Data $DATA_DIR/tag_data_temp.txt --Output $DATA_DIR
 python tokenizer.py --Lang 'english' --Data $ENG_DIR/eng_data.txt --Output $ENG_DIR
 
 #Combine Datasets and Tokenizer Vocabulary Output into main vocab file
-#python combine_vocab.py --txt1 $DATA_DIR/vocab.txt --txt2 $ENG_DIR/vocab.txt --Output $DATA_DIR
-
+python combine_vocab.py --txt1 $DATA_DIR/vocab.txt --txt2 $ENG_DIR/vocab.txt --Output $DATA_DIR
+cat $DATA_DIR/tag_data_temp.txt $ENG_DIR/eng_data.txt   > $DATA_DIR/train_data.txt
 

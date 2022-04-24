@@ -29,4 +29,4 @@ if __name__ == "__main__":
 
     with open('{}/vocab.txt'.format(out_data), 'w') as filehandle:
         for listitem in final_vocab:
-            filehandle.write(listitem + "\n")
+            filehandle.write(listitem)
