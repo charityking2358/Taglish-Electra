@@ -27,7 +27,7 @@ python electra/run_pretraining.py \
     "num_train_steps": 200,
     "save_checkpoints_steps": 100,
     "generator_hidden_size": 1.0,
-    "train_batch_size": 32}'
+    "train_batch_size": 64}'
 
 #python electra_pytorch/convert_electra_tf_checkpoint_to_pytorch.py \
 #    --tf_checkpoint_path=$MODEL_DIR \
