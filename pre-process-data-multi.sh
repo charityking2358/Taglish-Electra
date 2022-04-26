@@ -1,7 +1,6 @@
 #Grab the Electra repo and Electra to Pytorch conversiion repos
 git clone https://github.com/google-research/electra.git
-git clone https://github.com/lonePatient/electra_pytorch.git
-
+git clone https://github.com/huggingface/transformers.git
 
 DATA_DIR=data
 TRAIN_SIZE=1000000
@@ -11,9 +10,9 @@ MODEL_NAME='taglish-electra'
 echo "Processing Tagalog datasets"
 
 mkdir -p $DATA_DIR
-#Tagalog Dataset1
+#Tagalog Dataset1: TLunified 
 wget "https://s3.us-east-2.amazonaws.com/blaisecruz.com/datasets/tlunified/tlunified.zip" -O $DATA_DIR/tlunified.zip
-#Tagalog Dataset2
+#Tagalog Dataset2: Wikitext
 wget "https://www.googleapis.com/drive/v3/files/1FN8F-HjPetfCXLgtNBGYFNB0MhHgA8IO?alt=media&key=AIzaSyDFdiwxGZkC1v_J4Q2u7e9vJ6QGSbdDsl8" -O $DATA_DIR/train1.txt
 # English Dataset: OpenWebText ~500MB
 wget "https://www.googleapis.com/drive/v3/files/16GOW1rDdjLnYhMYH637AyJSs7XsivgoN?alt=media&key=AIzaSyDFdiwxGZkC1v_J4Q2u7e9vJ6QGSbdDsl8" -O $DATA_DIR/eng_data1.txt
@@ -41,9 +40,7 @@ else
 	rm $DATA_DIR/train1.txt
 	rm $DATA_DIR/tlunified.zip
 	rm $DATA_DIR/eng_data1.txt
-
 		
-
 fi
 
 echo "Creating Filipino and English-Based tokenizers"
