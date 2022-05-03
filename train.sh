@@ -23,13 +23,18 @@ python electra/run_pretraining.py \
     "do_eval": "false",
     "model_size": "small",
     "do_lower_case": "false",
-    "vocab_size": 56962,
-    "num_train_steps": 10000,
+    "vocab_size": 119547,  
+    "num_train_steps": 70000,
     "save_checkpoints_steps": 1000,
     "generator_hidden_size": 1.0,
-    "train_batch_size": 128}'
+    "train_batch_size": 32}'
 
-#python electra_pytorch/convert_electra_tf_checkpoint_to_pytorch.py \
-#    --tf_checkpoint_path=$MODEL_DIR \
-#    --pytorch_dump_path=$MODEL_DIR/pytorch_model.bin \
-#    --electra_config_file=$MODEL_DIR/config.json
+mv config.json $MODEL_DIR
+
+
+python transformers/src/transformers/models/electra/convert_electra_original_tf_checkpoint_to_pytorch.py \
+	--tf_checkpoint_path=$MODEL_DIR \
+	--config_file=$MODEL_DIR/config.json \
+	--pytorch_dump_path=$MODEL_DIR/pytorch_model.bin \
+	--discriminator "discriminator" \
+
