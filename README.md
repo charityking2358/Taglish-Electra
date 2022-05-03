@@ -23,7 +23,7 @@ pip install -r requirements.txt
 ### Processing the Data
 This bash script combines all of our data and uses the Bert-multilingual-base-cased model to tokenize our corpus. 
 ```
-bash pre-process-data.sh
+bash pre-process-data-multi.sh
 ```
 
 ### Pre-training our model 
