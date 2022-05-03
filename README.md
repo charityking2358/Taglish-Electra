@@ -33,7 +33,7 @@ bash train.sh
 ```
 ### Pre-trained ELECTRA Models
 We released new ELECTRA models in small configurations for discriminators. Our models are available on HuggingFace Transformers and can be used on both PyTorch and Tensorflow. <br> 
-Taglish-Electra at [charityking2358/taglish-electra-70k](https://huggingface.co/charityking2358/taglish-electra-70k)
+Taglish-Electra at [charityking2358/taglish-electra-55K](https://huggingface.co/charityking2358/taglish-electra-55K)
 
 #### To Evaluate Against Benchmark 
 1) Hate Speech Setup
@@ -72,7 +72,7 @@ python Filipino-Text-Benchmarks/train.py \
 3) Compare our model 
 ```
 python Filipino-Text-Benchmarks/train.py \
-    --pretrained charityking2358/taglish-electra-70k \
+    --pretrained charityking2358/taglish-electra-55K \
     --train_data ${DATA_DIR}/train.csv \
     --valid_data ${DATA_DIR}/valid.csv \
     --test_data ${DATA_DIR}/test.csv \
